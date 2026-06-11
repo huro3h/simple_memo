@@ -1,0 +1,43 @@
+## 短い説明（132文字以内 / Chrome Web Store「概要」欄）
+
+A simple and clean notepad extension. Quickly jot down memos, copy them to clipboard, and export/import your notes as JSON.
+
+
+## 詳細説明（Chrome Web Store「詳細説明」欄）
+
+Simple Memo is a lightweight notepad extension that lives in your browser toolbar.
+
+Features:
+- Create and delete memos instantly from the popup
+- Memos are displayed in chronological order with timestamps
+- Copy any memo to clipboard with a single click
+- Export all memos as a JSON file for backup
+- Import a JSON file to restore or migrate your memos
+- Plain text only — formatting is stripped on paste to keep notes clean
+
+All data is stored locally on your device using chrome.storage.local.
+No data is ever sent to external servers or shared with third parties.
+
+
+---
+
+
+## 短い説明 日本語版（132文字以内 / Chrome Web Store「概要」欄）
+
+シンプルなメモ帳拡張機能です。ブラウザのツールバーからすぐにメモを記録し、クリップボードへのコピーやJSONでのエクスポート／インポートができます。
+
+
+## 詳細説明 日本語版（Chrome Web Store「詳細説明」欄）
+
+Simple Memo は、ブラウザのツールバーに常駐するシンプルなメモ帳拡張機能です。
+
+機能一覧：
+- ポップアップからメモをすばやく作成・削除
+- メモは作成日時付きで新しい順に表示
+- 「コピー」ボタンでワンクリックでクリップボードにコピー
+- メモ一覧をJSONファイルとしてエクスポート（バックアップ）
+- JSONファイルをインポートしてメモを復元・移行
+- 貼り付け時に書式を自動除去し、常にプレーンテキストで保存
+
+すべてのデータは chrome.storage.local を使用してお使いの端末内にのみ保存されます。
+外部サーバーへの送信や第三者へのデータ提供は一切行いません。

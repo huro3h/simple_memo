@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Memo</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Simple Memo</h1>
+
+    <div class="input-area">
+      <textarea id="memoInput" placeholder="メモを入力..." rows="3"></textarea>
+      <button id="addBtn">追加</button>
+    </div>
+
+    <div class="memo-list" id="memoList">
+      <!-- メモ一覧がここに挿入される -->
+    </div>
+
+    <div class="io-area">
+      <button id="exportBtn">Export JSON</button>
+      <label class="import-label" id="importLabel">
+        Import JSON
+        <input type="file" id="importFile" accept=".json" />
+      </label>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
