@@ -46,4 +46,4 @@
 
 ## ライセンス
 
-MIT
+[MIT](https://github.com/huro3h/simple_memo/blob/main/LICENSE)
