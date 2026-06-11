@@ -2,6 +2,9 @@
 
 シンプルなメモ帳 Chrome 拡張機能です。
 
+<img height="400" alt="s" src="https://github.com/user-attachments/assets/105006da-846c-4f1c-867b-09c32e4b8233" />
+
+
 ## 機能
 
 - メモの作成・削除
