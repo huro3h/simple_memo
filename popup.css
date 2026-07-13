@@ -88,14 +88,9 @@ body {
 
 .memo-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   margin-bottom: 6px;
-}
-
-.memo-date {
-  font-size: 11px;
-  color: #999;
 }
 
 .memo-text {

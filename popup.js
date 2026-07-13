@@ -37,10 +37,6 @@ function renderMemos(memos) {
     text.className = 'memo-text';
     text.textContent = memo.text;
 
-    const meta = document.createElement('span');
-    meta.className = 'memo-date';
-    meta.textContent = formatDate(memo.createdAt);
-
     const copyBtn = document.createElement('button');
     copyBtn.className = 'copy-btn';
     copyBtn.textContent = 'コピー';
@@ -58,7 +54,6 @@ function renderMemos(memos) {
 
     const header = document.createElement('div');
     header.className = 'memo-header';
-    header.appendChild(meta);
     header.appendChild(actions);
 
     item.appendChild(header);
@@ -154,13 +149,6 @@ function importMemos(e) {
     }
   };
   reader.readAsText(file);
-}
-
-// 日付フォーマット
-function formatDate(timestamp) {
-  const d = new Date(timestamp);
-  const pad = (n) => String(n).padStart(2, '0');
-  return `${d.getFullYear()}/${pad(d.getMonth() + 1)}/${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}`;
 }
 
 // イベントリスナー
