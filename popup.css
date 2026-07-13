@@ -15,13 +15,6 @@ body {
   padding: 16px;
 }
 
-.title {
-  font-size: 18px;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin-bottom: 14px;
-}
-
 /* 入力エリア */
 .input-area {
   display: flex;
@@ -46,14 +39,22 @@ body {
   border-color: #4a90e2;
 }
 
+.input-area textarea::placeholder {
+  color: #ccc;
+}
+
 .input-area button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   align-self: flex-end;
-  padding: 8px 20px;
+  width: 36px;
+  height: 36px;
+  padding: 0;
   background: #4a90e2;
   color: #fff;
   border: none;
   border-radius: 6px;
-  font-size: 14px;
   cursor: pointer;
   transition: background 0.2s;
 }
@@ -107,13 +108,93 @@ body {
   align-items: center;
 }
 
+.edit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  background: transparent;
+  color: #6c9e6c;
+  border: 1px solid #6c9e6c;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.edit-btn:hover {
+  background: #6c9e6c;
+  color: #fff;
+}
+
+.save-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  background: transparent;
+  color: #6c9e6c;
+  border: 1px solid #6c9e6c;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.save-btn:hover {
+  background: #6c9e6c;
+  color: #fff;
+}
+
+.cancel-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  background: transparent;
+  color: #999;
+  border: 1px solid #999;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.cancel-btn:hover {
+  background: #999;
+  color: #fff;
+}
+
+.memo-edit-textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #4a90e2;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #333;
+  line-height: 1.5;
+  resize: vertical;
+  outline: none;
+  background: #fff;
+  min-height: 60px;
+  margin-top: 6px;
+}
+
 .copy-btn {
-  padding: 3px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  padding: 0;
   background: transparent;
   color: #4a90e2;
   border: 1px solid #4a90e2;
   border-radius: 4px;
-  font-size: 12px;
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
 }
