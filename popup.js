@@ -61,8 +61,15 @@ function renderMemos(memos) {
     actions.appendChild(editBtn);
     actions.appendChild(deleteBtn);
 
+    const titleEl = document.createElement('span');
+    titleEl.className = memo.title ? 'memo-title' : 'memo-title memo-title--empty';
+    titleEl.textContent = memo.title || '+ Title';
+    titleEl.title = 'Edit title';
+    titleEl.addEventListener('click', () => startTitleEdit(titleEl, index, memo.title || ''));
+
     const header = document.createElement('div');
     header.className = 'memo-header';
+    header.appendChild(titleEl);
     header.appendChild(actions);
 
     item.appendChild(header);
@@ -97,6 +104,41 @@ function copyMemo(text, btn) {
       btn.innerHTML = COPY_ICON;
       btn.classList.remove('copied');
     }, 700);
+  });
+}
+
+// タイトルのインライン編集を開始
+function startTitleEdit(titleEl, index, currentTitle) {
+  const input = document.createElement('input');
+  input.type = 'text';
+  input.className = 'memo-title-input';
+  input.value = currentTitle;
+  input.placeholder = 'Title...';
+  input.maxLength = 50;
+
+  titleEl.replaceWith(input);
+  input.focus();
+  if (currentTitle) input.select();
+
+  let saved = false;
+  const save = () => {
+    if (saved) return;
+    saved = true;
+    updateMemoTitle(index, input.value.trim());
+  };
+
+  input.addEventListener('blur', save);
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') { e.preventDefault(); input.blur(); }
+    if (e.key === 'Escape') { saved = true; input.replaceWith(titleEl); }
+  });
+}
+
+// メモのタイトルを更新
+function updateMemoTitle(index, title) {
+  chrome.storage.local.get({ memos: [] }, ({ memos }) => {
+    memos[index].title = title;
+    chrome.storage.local.set({ memos }, () => renderMemos(memos));
   });
 }
 
