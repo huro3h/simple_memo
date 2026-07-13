@@ -2,7 +2,7 @@
 
 シンプルなメモ帳 Chrome 拡張機能です。
 
-<img height="400" alt="s" src="https://github.com/user-attachments/assets/105006da-846c-4f1c-867b-09c32e4b8233" />
+<img height="400" alt="s" src="https://github.com/user-attachments/assets/57ebafac-c962-4deb-ac6a-da5500ccbacb" />
 
 
 ## 機能
